@@ -58,7 +58,7 @@ function App() {
     <BrowserRouter>
       <NavBar isDark={isDark} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/collections" element={<Collections />} />
         <Route path="/contact" element={<Contact />} />
