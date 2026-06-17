@@ -55,7 +55,7 @@ const NavBar = ({ isDark }) => {
               </button>
               <div className="mt-10 flex flex-col gap-6">
                 <Link to="/home" className="text-sm font-medium tracking-wide text-black">HOME</Link>
-                <a href="#" className="text-sm font-medium tracking-wide text-black">ABOUT</a>
+                <Link to="/about" className="text-sm font-medium tracking-wide text-black">ABOUT</Link>
                 <a href="#" className="text-sm font-medium tracking-wide text-black">DESTINATIONS</a>
                 <div className="mt-2">
                   <p className="text-[10px] tracking-widest text-gray-400 mb-3">VILLAS</p>

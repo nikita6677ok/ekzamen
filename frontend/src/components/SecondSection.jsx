@@ -1,7 +1,6 @@
-import img from '../assets/omailifestyle.jpg'
 import { motion } from 'framer-motion'
 
-const SecondSection = () => {
+const SecondSection = ({ img, topText, bottomText, linkText }) => {
   return (
     <div
       style={{
@@ -10,7 +9,6 @@ const SecondSection = () => {
       }}
       className="w-full px-10 py-20"
     >
-
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,21 +24,18 @@ const SecondSection = () => {
           marginLeft: '60px'
         }}
       >
-        Omai redefines destination living with an evolving ensemble of private villas, architecturally designed in harmony with their fabled locations. Impeccably appointed residences set the scene for rarefied experiences, realised through five-star service tailored only to you.
+        {topText}
       </motion.p>
-
       <div className="mt-16 flex items-end gap-10">
-
         <motion.img
           src={img}
-          alt="Omai lifestyle"
+          alt=""
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
           style={{ width: '55%', objectFit: 'cover' }}
         />
-
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +43,6 @@ const SecondSection = () => {
           viewport={{ once: true, amount: 0.5 }}
           style={{ maxWidth: '320px', paddingBottom: '20px' }}
         >
-
           <p
             style={{
               fontSize: '18px',
@@ -58,9 +52,8 @@ const SecondSection = () => {
               letterSpacing: '0.2px'
             }}
           >
-            Nature, architecture and understated luxury converge to create immersive sanctuaries, offering space to breathe, reflect, and reconnect. With every detail considered and five-star service intuitively delivered, Omai reimagines destination living as a deeply personal and effortlessly elevated experience.
+            {bottomText}
           </p>
-
           <p
             className="inline-block mt-6 cursor-pointer border-b border-[#888] pb-[2px] hover:border-[#2c2c2c] transition-colors"
             style={{
@@ -69,11 +62,9 @@ const SecondSection = () => {
               color: '#555'
             }}
           >
-            DISCOVER OUR PHILOSPHY
+            {linkText}
           </p>
-
         </motion.div>
-
       </div>
     </div>
   )
